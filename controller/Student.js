@@ -39,7 +39,7 @@ const addStudent = async (req, res) => {
 
     return res.status(200).send({
       status: 200,
-      message: "Student created successfully!",
+      message: "Student created Successfully!",
       data: result,
     });
   } catch (err) {
