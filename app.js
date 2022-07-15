@@ -3,8 +3,6 @@ var bodyParser = require("body-parser");
 const app = express();
 var cors = require("cors");
 
-// require("./config/database");
-require("./config/dataBase.js");
 require("dotenv").config();
 
 app.use(cors());
@@ -17,8 +15,7 @@ app.use(bodyParser.json());
 app.listen(process.env.PORT, () => {
   console.log("app is listening on " + process.env.PORT);
 });
-app.use("/user", require("./routes.js/userRoutes"));
-app.use("/event", require("./routes.js/eventRoutes"));
-app.use("/project", require("./routes.js/Project"));
-app.use("/student", require("./routes.js/Student"));
+app.use("/",  (req, res) => {
+  res.send('Hello Worlddddddddd!')
+});
 module.exports = app;
