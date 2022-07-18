@@ -16,6 +16,10 @@ app.listen(process.env.PORT, () => {
   console.log("app is listening on " + process.env.PORT);
 });
 app.use("/",  (req, res) => {
-  res.send('testing heroku website today')
+  res.send('testing heroku website todayss')
 });
+app.use("/user", require("./routes.js/userRoutes"));
+app.use("/event", require("./routes.js/eventRoutes"));
+app.use("/project", require("./routes.js/Project"));
+app.use("/student", require("./routes.js/Student"));
 module.exports = app;
